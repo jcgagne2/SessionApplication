@@ -1,9 +1,17 @@
 spring:
   application:
     name: SessionApplication
-  redis:
-    host: ${REDIS_HOST:localhost}
-    port: ${REDIS_PORT:6379}
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+  # Pour avoir des sessions indépendantes
+  # Voir aussi SecurityConfig.cookieSerializer
+  session:
+    data:
+      redis:
+        namespace: SessionApplication
 
 server:
   servlet:
