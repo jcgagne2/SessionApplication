@@ -8,12 +8,13 @@ spring:
 
   # Pour avoir des sessions indépendantes
   # Voir aussi SecurityConfig.cookieSerializer
-  session:
-    data:
-      redis:
-        namespace: SessionApplication
+#  session:
+#    data:
+#      redis:
+#        namespace: SessionApplication
 
 server:
+  port: 8083
   servlet:
     session:
       tracking-modes: cookie
